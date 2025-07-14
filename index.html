@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Priyanga K | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(to bottom, #800020, #000000);
+        border-radius: 10px;
+      }
+
+      /* Preloader */
+      #preloader {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        color: white;
+        font-size: 1.5rem;
+      }
+
+      /* Wine Glow */
+      .wine-glow:hover {
+        box-shadow: 0 0 20px #800020, 0 0 40px #800020;
+        transition: 0.3s ease-in-out;
+      }
+
+      .glass {
+        background: rgba(125, 4, 4, 0.245);
+        border: 1px solid rgba(125, 4, 4, 0.245);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+      }
+      .wine-glow {
+  transition: 0.3s ease-in-out;
+}
+.wine-glow:hover {
+  box-shadow: 0 0 15px #b11226, 0 0 30px #b11226;
+  transform: scale(1.02);
+}
+
+      <style>
+  .text-wine {
+    color: #b11226; /* wine shade */
+  }
+  .bg-wine {
+    background-color: #b11226;
+  }
+  .border-wine {
+    border-color: #b11226;
+  }
+  .hover\:bg-wine:hover {
+    background-color: #b11226;
+  }
+
+  .glow-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: radial-gradient(circle, rgba(177, 18, 38, 0.6) 30%, transparent 80%);
+  box-shadow:
+    0 0 20px rgba(177, 18, 38, 0.6),
+    0 0 40px rgba(177, 18, 38, 0.7),
+    0 0 60px rgba(177, 18, 38, 0.8),
+    0 0 80px rgba(177, 18, 38, 1);
+  filter: blur(2px);
+  z-index: 0;
+}
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.glow-ring {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+</style>
+
+    </style>
+  </head>
+  <body class="bg-black text-white">
+
+    <!-- Preloader -->
+    <div id="preloader">Loading Priyanga's Portfolio...</div>
+
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 bg-black bg-opacity-70 border-b border-wine">
+      <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1 class="text-2xl font-bold text-white">Priyanga K</h1>
+        <ul class="flex gap-6 text-sm font-medium">
+          <li><a href="#hero" class="hover:text-wine">Home</a></li>
+          <li><a href="#about" class="hover:text-wine">About</a></li>
+          <li><a href="#projects" class="hover:text-wine">Projects</a></li>
+          <li><a href="#certifications" class="hover:text-wine">Certifications</a></li>
+          <li><a href="#contact" class="hover:text-wine">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+<section id="hero" class="min-h-screen flex items-center justify-center px-6 bg-cover bg-center text-white relative" style="background-image: url('wine.jpeg');">
+  <div class="max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Left: Text -->
+    <div class="space-y-6">
+      <h1 class="text-3xl md:text-4xl font-semibold">Hello, It's Me</h1>
+      <h2 class="text-5xl md:text-6xl font-extrabold">Priyanga K</h2>
+      <h3 class="text-2xl md:text-3xl">
+  And I'm a 
+  <span id="typewriter" class="font-bold border-r-2 pr-1"></span>
+</h3>
+
+      <p class="text-gray-300 max-w-xl">
+        Biomedical Engineer and Certified ServiceNow Developer passionate about automation and digital health.
+      </p>
+
+
+      <!-- Resume Buttons -->
+      <div class="flex flex-wrap gap-4 mt-6">
+        <a href="D:\PORTFOLIO\PRIYANGA_BIOMEDICAL_RESUME.pdf" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-1 rounded-full transition duration-300 shadow-md">
+          Biomedical Resume
+        </a>
+        <a href="D:\PORTFOLIO\PRIYANGA_SERVICENOW_RESUME.pdf" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-1 rounded-full transition duration-300 shadow-md">
+          ServiceNow Resume
+        </a>
+      </div>
+    </div>
+
+   <!-- Profile Image -->
+<div class="flex justify-center">
+  <div class="relative w-64 h-64">
+    <div class="absolute inset-0 glow-ring"></div>
+    <img src="D:\PORTFOLIO\PP.jpg" alt="Priyanga" class="w-64 h-64 object-cover rounded-full border-4 border-white shadow-xl relative z-10" />
+  </div>
+</div>
+
+  </div>
+</section>
+<script>
+  const roles = [
+    { text: "Biomedical Engineer", color: "#b11226" },  // Wine
+    { text: "ServiceNow Developer", color: "#b11226" }  // Wine
+  ];
+
+  let currentIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingSpeed = 100;
+  const delayBetweenRoles = 2000;
+
+  function type() {
+    const element = document.getElementById("typewriter");
+    const role = roles[currentIndex];
+
+    // Apply color
+    element.style.color = role.color;
+    element.style.borderRightColor = role.color;
+
+    if (isDeleting) {
+      element.textContent = role.text.substring(0, charIndex--);
+    } else {
+      element.textContent = role.text.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === role.text.length) {
+      setTimeout(() => isDeleting = true, delayBetweenRoles);
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      currentIndex = (currentIndex + 1) % roles.length;
+    }
+
+    setTimeout(type, isDeleting ? 60 : typingSpeed);
+  }
+
+  window.addEventListener("DOMContentLoaded", type);
+</script>
+
+
+<!-- About + Skills + Education Section -->
+<section id="about" class="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+  <!-- Left: About + Skills -->
+  <div class="space-y-8" data-aos="fade-right">
+    <div class="glass p-6 rounded-2xl wine-glow">
+      <h2 class="text-3xl font-bold text-wine mb-4">About Me</h2>
+      <p class="text-gray-300 leading-relaxed">
+        I'm a Biomedical Engineering student passionate about combining medical technology and software solutions.
+        Skilled in ServiceNow development and automation, I aim to enhance healthcare delivery and service platforms
+        with efficient, user-friendly systems.
+      </p>
+    </div>
+    <div class="glass p-6 rounded-2xl wine-glow">
+      <h2 class="text-3xl font-bold text-wine mb-4">Skills & Tools</h2>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>ServiceNow (CSA, CAD)</li>
+        <li>GitHub, GitLab, Figma</li>
+        <li>Healthcare Analytics, Biomaterials</li>
+        <li>Medical Instrumentation</li>
+        <li>Time Management, Communication, Team Leadership</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Right: Education -->
+  <div class="glass p-6 rounded-2xl wine-glow" data-aos="fade-left">
+    <h2 class="text-3xl font-bold text-wine mb-4">Education Journey</h2>
+    <ul class="space-y-4 text-gray-300">
+      <li>
+        <strong>B.E Biomedical Engineering</strong><br />
+        Bannari Amman Institute of Technology<br />
+        CGPA: 7.88 (2022–2026)
+      </li>
+      <li>
+        <strong>12th Grade</strong><br />
+        Crescent Castle Matric Hr. Sec School, Ooty<br />
+        Percentage: 80.33% (2020–2022)
+      </li>
+      <li>
+        <strong>10th Grade</strong><br />
+        M.S.V Matriculation School, Tirupur<br />
+        Percentage: 90% (2019–2020)
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 px-6 max-w-7xl mx-auto relative z-10">
+  <h2 class="text-4xl font-bold text-wine text-center mb-12" data-aos="fade-down">Projects</h2>
+
+  <!-- 3x3 Grid -->
+  <div class="grid md:grid-cols-3 gap-8" data-aos="fade-up">
+    <!-- Project Card -->
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Smart Saline Monitoring</h3>
+      <p class="text-gray-300">Real-time IV fluid monitoring for hospitals using flow control and alert systems.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Herbal Hydrogel</h3>
+      <p class="text-gray-300">Organic gel for treating diabetic ulcers and burns, made from herbal ingredients.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Pulse Oximeter</h3>
+      <p class="text-gray-300">Heart rate & SpO2 monitor using MAX30100 sensor, Arduino, OLED, and buzzer.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Voice-enabled Pill Vending</h3>
+      <p class="text-gray-300">Real-time voice-controlled pill dispenser for elderly and differently-abled users.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Auto Turf Arena</h3>
+      <p class="text-gray-300">IoT-based sports turf maintenance & alert system for better facility management.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Network Request Automation</h3>
+      <p class="text-gray-300">ServiceNow-based automation for managing internet and fiber connection requests.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Dynamic Form UI in ServiceNow</h3>
+      <p class="text-gray-300">Improved form UX with client scripts & UI policies in ServiceNow app interface.</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Biomaterials Study</h3>
+      <p class="text-gray-300">Researched biomaterials and their role in 3D bioprinting (via Udemy).</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl wine-glow transition" >
+      <h3 class="text-xl font-semibold text-white mb-2">Healthcare Analytics (Internship)</h3>
+      <p class="text-gray-300">Machine learning-based research on healthcare analytics through Techvolt internship.</p>
+    </div>
+  </div>
+</section>
+<!-- Certifications Section -->
+<section id="certifications" class="py-20 px-6 max-w-7xl mx-auto">
+  <h2 class="text-4xl font-bold text-wine text-center mb-12" data-aos="fade-down">Certifications</h2>
+
+  <div class="grid md:grid-cols-2 gap-8" data-aos="fade-up">
+    <!-- CSA -->
+    <div onclick="openCert('cert1')" class="glass p-6 rounded-2xl wine-glow transition cursor-pointer">
+      <h3 class="text-xl font-semibold text-white mb-2">ServiceNow - CSA</h3>
+      <p class="text-gray-300">Certified System Administrator – mastered ServiceNow core modules & architecture.</p>
+    </div>
+
+    <!-- CAD -->
+    <div onclick="openCert('cert2')" class="glass p-6 rounded-2xl wine-glow transition cursor-pointer">
+      <h3 class="text-xl font-semibold text-white mb-2">ServiceNow - CAD</h3>
+      <p class="text-gray-300">Certified Application Developer – created custom apps and automation workflows.</p>
+    </div>
+
+    <!-- Biomaterials -->
+    <div onclick="openCert('cert3')" class="glass p-6 rounded-2xl wine-glow transition cursor-pointer">
+      <h3 class="text-xl font-semibold text-white mb-2">Biomaterials & Bioprinting</h3>
+      <p class="text-gray-300">Completed a Udemy course exploring bioinks, scaffolds, and tissue engineering.</p>
+    </div>
+
+    <!-- Data Analytics -->
+    <div onclick="openCert('cert4')" class="glass p-6 rounded-2xl wine-glow transition cursor-pointer">
+      <h3 class="text-xl font-semibold text-white mb-2">Data Analytics</h3>
+      <p class="text-gray-300">Certificate course on data analytics and dashboard visualization for healthcare data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Certificate Popups -->
+<div id="cert1" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex justify-center items-center px-4">
+ <div class="relative max-w-4xl w-full popup-glass p-6 grid md:grid-cols-2 gap-6 animate-fadeIn">
+ <div class="text-white space-y-3">
+      <h2 class="text-2xl font-bold text-wine">ServiceNow - CSA</h2>
+      <p>Certified System Administrator – demonstrates understanding of ServiceNow platform architecture and modules.</p>
+    </div>
+    <div class="flex justify-center items-center">
+      <img src="D:\PORTFOLIO\csa.png" alt="CSA Certificate" class="rounded-lg shadow-lg max-h-[300px]" />
+    </div>
+    <button onclick="closeCert('cert1')" class="absolute top-4 right-4 text-white text-xl hover:text-wine font-bold">✕</button>
+  </div>
+</div>
+
+<div id="cert2" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex justify-center items-center px-4">
+ <div class="relative max-w-4xl w-full popup-glass p-6 grid md:grid-cols-2 gap-6 animate-fadeIn">
+  <div class="text-white space-y-3">
+      <h2 class="text-2xl font-bold text-wine">ServiceNow - CAD</h2>
+      <p>Certified Application Developer – developed custom scoped apps, flow designers, client scripts, and workflows.</p>
+    </div>
+    <div class="flex justify-center items-center">
+      <img src="D:\PORTFOLIO\cad.png" alt="CAD Certificate" class="rounded-lg shadow-lg max-h-[300px]" />
+    </div>
+    <button onclick="closeCert('cert2')" class="absolute top-4 right-4 text-white text-xl hover:text-wine font-bold">✕</button>
+  </div>
+</div>
+
+<div id="cert3" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex justify-center items-center px-4">
+  <div class="relative max-w-4xl w-full popup-glass p-6 grid md:grid-cols-2 gap-6 animate-fadeIn">
+ <div class="text-white space-y-3">
+      <h2 class="text-2xl font-bold text-wine">Biomaterials & Bioprinting</h2>
+      <p>Explored biocompatibility, scaffolds, bioinks, and 3D tissue printing through an online Udemy course.</p>
+    </div>
+    <div class="flex justify-center items-center">
+      <img src="D:\PORTFOLIO\bbp.png" alt="Biomaterials Certificate" class="rounded-lg shadow-lg max-h-[300px]" />
+    </div>
+    <button onclick="closeCert('cert3')" class="absolute top-4 right-4 text-white text-xl hover:text-wine font-bold">✕</button>
+  </div>
+</div>
+
+<div id="cert4" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex justify-center items-center px-4">
+  <div class="relative max-w-4xl w-full popup-glass p-6 grid md:grid-cols-2 gap-6 animate-fadeIn">
+ <div class="text-white space-y-3">
+      <h2 class="text-2xl font-bold text-wine">Data Analytics</h2>
+      <p>Gained hands-on experience in Excel analytics, dashboards, and visual insights for biomedical data.</p>
+    </div>
+    <div class="flex justify-center items-center">
+      <img src="D:\PORTFOLIO\dv.png" alt="Data Analytics Certificate" class="rounded-lg shadow-lg max-h-[300px]" />
+    </div>
+    <button onclick="closeCert('cert4')" class="absolute top-4 right-4 text-white text-xl hover:text-wine font-bold">✕</button>
+  </div>
+</div>
+<script>
+  function openCert(id) {
+    document.getElementById(id).classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCert(id) {
+    document.getElementById(id).classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }
+</script>
+<style>
+  .popup-glass {
+    background: rgba(255, 255, 255, 0.05); /* true frosted glass */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  }
+</style>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-6 max-w-3xl mx-auto text-center">
+  <h2 class="text-4xl font-bold text-wine mb-8" data-aos="fade-down">Get in Touch</h2>
+  <form class="glass p-6 rounded-2xl space-y-4" data-aos="zoom-in">
+    <input type="text" placeholder="Your Name" class="w-full p-3 rounded-lg bg-black text-white border border-wine focus:outline-none">
+    <input type="email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-black text-white border border-wine focus:outline-none">
+    <textarea rows="5" placeholder="Your Message" class="w-full p-3 rounded-lg bg-black text-white border border-wine focus:outline-none"></textarea>
+    <button type="submit" class="bg-wine text-white py-2 px-6 rounded-full hover:scale-105 transition">Send Message</button>
+  </form>
+
+  <!-- Contact Info -->
+  <div class="mt-10 text-gray-300 space-y-2" data-aos="fade-up">
+    <p><strong>Phone:</strong> +91 6374197700</p>
+    <p><strong>Email:</strong> priyangadvr29@gmail.com</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/priyanga-k-61a145275" class="text-wine underline">IN@Priyuu</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/priyanga229/" class="text-wine underline">GIT@Priyuu</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-6 border-t border-gray-700 text-center text-gray-400 text-sm">
+  © 2025 Priyanga K. All rights reserved.   Thanks for visiting ❤️ !
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  // Preloader
+  window.addEventListener('load', () => {
+    document.getElementById('preloader').style.display = 'none';
+  });
+
+  // AOS Init
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+</body>
+</html>
